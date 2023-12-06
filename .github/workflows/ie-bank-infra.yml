@@ -22,7 +22,7 @@ jobs:
       run: az bicep build --file ./main.bicep
 
   deploy-dev:
-#   if: github.ref == 'refs/heads/dev'
+    if: github.ref == 'refs/heads/dev'
     runs-on: ubuntu-latest
     needs: build
     environment:
@@ -55,7 +55,7 @@ jobs:
         deploymentName: ${{ env.USER_ALIAS }}
 
   deploy-uat:
-#   if: github.ref == 'refs/heads/dev'
+    if: github.ref == 'refs/heads/dev'
     runs-on: ubuntu-latest
     needs: [build, deploy-dev]
     environment:
