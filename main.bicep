@@ -118,10 +118,16 @@ module appService 'modules/app-service.bicep' = {
 
 output appServiceAppHostName string = appService.outputs.appServiceAppHostName
 
-resource azureMonitor 'Microsoft.OperationalInsights/workspaces@2020-08-01' = {
+resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2020-08-01' = if (environmentType == 'uat') {
   name: azureMonitorName
   location: location
+  properties: {
+    sku: {
+      name: 'PerGB2018'
+    }
+  }
 }
+
 
 resource appInsights 'Microsoft.Insights/components@2020-02-02' = {
   name: appInsightsName

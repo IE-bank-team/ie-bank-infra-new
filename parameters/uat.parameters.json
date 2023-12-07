@@ -21,13 +21,13 @@
             "value": "chiaradigi-fe-uat"
         },
         "azureMonitorName": {
-            "value": "chiaradigi-am-uat"
+            "value": "santiagof-am-uat"
         },
         "appInsightsName": {
             "value": "chiaradigi-ai-uat"
         },
         "location": {
-            "value": "Canada Central"
+            "value": "UK West"
         }
     }
 }
