@@ -21,7 +21,7 @@
             "value": "chiaradigi-fe-dev"
         },
         "azureMonitorName": {
-            "value": "chiaradigi-am"
+            "value": "sfischel-am-dev"
         },
         "appInsightsName": {
             "value": "chiaradigi-ai"
